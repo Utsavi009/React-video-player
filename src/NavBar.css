@@ -1,0 +1,15 @@
+.topbar {
+    background-color: aqua;
+    position: sticky; 
+}  
+
+.nav-bar {
+    margin-bottom: 4em;
+}
+
+.nav-link {
+    margin: 0 .5rem 0 .5rem;
+    color: grey;
+    /* border: 1px solid grey;
+    border-radius: 10%; */
+}
