@@ -2,22 +2,15 @@
     position: relative;
     padding-top: 56.25% /* Player ratio: 100 / (1280 / 720) */
   }
-  
+
   .react-player {
-    position: absolute;
-    top: 0;
-    left: 0;
+    margin: .5rem;
+    padding : .5rem;
   }
 
 .small-thumbs {
-  width: 100px;
+  width: 150px;
 }
-
-/* .main-container {
-    margin-top: 2rem; 
-    display: inline-flex;
-  flex-wrap: wrap;
-} */
 
 .flexy-thumbs {
     /* display: inline-flex;
@@ -35,9 +28,19 @@
     grid-template-rows: 1;
 }
 
+.video-container {
+  border: 1px solid black;
+  border-radius: 5%;
+}
+
 .thumb-container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 3;
-    margin: .2rem;
+   /*  margin: .2rem;
+    padding: .5rem */
+}
+
+img {
+  padding: .5rem;
 }

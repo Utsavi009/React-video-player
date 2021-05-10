@@ -1,27 +1,25 @@
 import React from 'react';
 import ReactPlayer from 'react-player';
-import { Link, useParams } from 'react-router-dom';
-import './App.css';
+import { useParams } from 'react-router-dom';
+import '../App.css';
 import './reactplayer.css';
+import Movie from './Movie';
+import movies from '../data'
 
 
-const VideoPlayer = ({ movies }) => {
+const VideoPlayer = () => {
 
     let { id } = useParams();
-
-    console.log(movies);
-
 
 
     return (
         <div className='video-player-container'>
 
             <div className='video-container'>
-                <div><h1>Video Content</h1></div>
-                <div>
-                    {id &&
+                <div><h1>Video Content</h1></div><hr></hr>
+                <div className = 'react-player'>
+                     {id &&
                         <ReactPlayer url={movies[id].sources} playing
-                            className='react-player'
                             width='100%'
                             height='100%'
                             controls="true"
@@ -31,19 +29,17 @@ const VideoPlayer = ({ movies }) => {
 
 
             <div className='thumb-container'>
-                {movies.map((movie, index) => {
+                {movies.map((movie, index) => <Movie key={index} {...movie} index={index}/>)}
+                {/* {movies.map((movie, index) => {
                     return (!id &&
-
                         <div className="flexy-thumbs">
-                            <Link to={`/videoplayer/${index}`}>
-                                <img src={movie.thumb} className="small-thumbs" />
-                                { }
-                                <h6>{movie.title}</h6>
-                                <p>{movie.subtitle}</p>
-                            </Link>
-                        </div>)
+                        <Link to={`/videoplayer/${index}`}>
+                            <img src={movie.thumb} className="small-thumbs" />
+                        </Link>
+                    </div>
+                       )
                 })
-                }
+                } */}
             </div>
         </div>
     );

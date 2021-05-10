@@ -1,10 +1,9 @@
 import React from 'react';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
-import movies from './data';
 import './App.css';
-import Home from './Home';
-import VideoPlayer from './VideoPlayer';
-import NavBar from './NavBar';
+import Home from './components/Home';
+import VideoPlayer from './components/VideoPlayer';
+import NavBar from './components/NavBar';
 
 function App() {
 
@@ -22,7 +21,7 @@ function App() {
                 </Route>
 
                 <Route exact path='/videoplayer/:id?'>
-                  <VideoPlayer movies={movies} />
+                  <VideoPlayer />
                 </Route>
 
               </Switch>
